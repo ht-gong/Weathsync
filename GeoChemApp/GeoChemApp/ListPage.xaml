@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeoChemApp.ListPage">
+    <ContentPage.Content>
+        <ListView Margin="5" x:Name="LVFoundData" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+            <DataTemplate>
+               <ViewCell Height="75">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.25*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding ImageSource}" HeightRequest="80" WidthRequest="80"/>
+                            <StackLayout Grid.Column="1" Padding="5,5,0,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding TimePeriod}" VerticalOptions="Center" FontSize="10" TextColor="Black"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding MonitorErrors}" VerticalOptions="Center" FontSize="15" TextColor="#E96950"/>
+                                    <Label Text="{Binding Pollution_Lvl}" VerticalOptions="Center" FontSize="15" TextColor="#A0A0A0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                </ViewCell> 
+             </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+                  
+    </ContentPage.Content>
+</ContentPage>

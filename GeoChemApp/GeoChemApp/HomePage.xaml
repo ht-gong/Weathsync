@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeoChemApp.HomePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem  Name="MenuItem1" Order="Primary" Text="接收的监测消息" Priority="0" Activated="MenuItem1_Activated" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Image Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Source="GigIcon.png" BackgroundColor="#FFFEF" AbsoluteLayout.LayoutBounds="0,0,1,0.55" AbsoluteLayout.LayoutFlags="All"/>
+
+            <Grid BackgroundColor="White"  AbsoluteLayout.LayoutBounds= "0,1,1,0.45" AbsoluteLayout.LayoutFlags="All">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Source="lineh.png" Grid.Row="0" />
+                <Label Grid.Row="1" Text="开启自动检测" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+                <Switch x:Name="switchcell" Grid.Row="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Toggled="switchcell_Toggled"></Switch>
+            </Grid>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
