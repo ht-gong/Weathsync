@@ -2,6 +2,8 @@
 
 A cross-platform (IOS, Android) mobile app I developed with Xamarin.Forms and Windows forms (mainly in C#) during the 2018 summer.
 
+Also included windows desktop app to interact with REST API.
+
 Syncs weather directly from a REST API I coded and constructed with Microsoft Azure. Focused on also collecting the specific air quality indexes,
 such as NO2, NOx, SO2, etc.
 
